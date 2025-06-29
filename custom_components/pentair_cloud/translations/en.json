@@ -34,7 +34,14 @@
       "device_time": { "name": "Device time" },
       "last_report": { "name": "Last report" },
       "motor_speed": { "name": "Motor speed" },
-      "salt_level": { "name": "Salt level" }
+      "salt_level": { "name": "Salt level" },
+      "no_of_regens": { "name": "Number of regenerations"},
+      "salt_refill": {"name": "Salt refill"},
+      "salt_remaining": {"name": "Salt remaining"},
+      "salt_dosage": {"name": "Salt dosage"},
+      "resin_volume": {"name": "Resin volume"},
+      "vol_used_4m_lastregen": {"name": "Water used from last regen"},
+      "volume_left": {"name": "Volume left"}
     }
   }
 }
