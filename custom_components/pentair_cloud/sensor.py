@@ -137,6 +137,63 @@ SENSOR_MAP: dict[str | None, tuple[PentairSensorEntityDescription, ...]] = {
             value_fn=lambda data: get_field_value("salt_level", data),
         ),
     ),
+    "POE1": (
+        PentairSensorEntityDescription(
+            key="no_of_regens",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            translation_key="no_of_regens",
+            state_class=SensorStateClass.TOTAL_INCREASING,
+            value_fn=lambda data: get_field_value("no_of-regens", data),
+        ),
+        PentairSensorEntityDescription(
+            key="salt_refill",
+            device_class=SensorDeviceClass.WEIGHT,
+            native_unit_of_measurement=UnitOfMass.POUNDS,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="salt_refill",
+            value_fn=lambda data: get_field_value("salt_refill", data),
+        ),
+        PentairSensorEntityDescription(
+            key="salt_remaining",
+            device_class=SensorDeviceClass.WEIGHT,
+            native_unit_of_measurement=UnitOfMass.POUNDS,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="salt_remaining",
+            value_fn=lambda data: get_field_value("salt_remaining", data),
+        ),
+        PentairSensorEntityDescription(
+            key="salt_dosage",
+            device_class=SensorDeviceClass.WEIGHT,
+            native_unit_of_measurement=UnitOfMass.POUNDS,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="salt_dosage",
+            value_fn=lambda data: get_field_value("salt_dosage", data),
+        ),
+        PentairSensorEntityDescription(
+            key="resin_volume",
+            device_class=SensorDeviceClass.WEIGHT,
+            native_unit_of_measurement=UnitOfMass.POUNDS,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="resin_volume",
+            value_fn=lambda data: get_field_value("resin_volume", data),
+        ),
+        PentairSensorEntityDescription(
+            key="vol_used_4m_lastregen",
+            device_class=SensorDeviceClass.VOLUME,
+            native_unit_of_measurement=UnitOfVolume.GALLONS,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="vol_used_4m_lastregen",
+            value_fn=lambda data: get_field_value("vol_used_4m_lastregen", data),
+        ),
+        PentairSensorEntityDescription(
+            key="volume_left",
+            device_class=SensorDeviceClass.VOLUME,
+            native_unit_of_measurement=UnitOfVolume.GALLONS,
+            state_class=SensorStateClass.MEASUREMENT,
+            translation_key="volume_left",
+            value_fn=lambda data: get_field_value("volume_left", data),
+        ),
+    )
 }
 
 
